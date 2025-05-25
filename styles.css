@@ -1,0 +1,81 @@
+/* Base styling */
+body {
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+#alg {
+  background: linear-gradient(300deg, #00bfff,#e0a422, #807d7d );
+  background-size: 180% 180%;
+  animation: gradient-animation 10s ease infinite;
+  
+  /* لعرض التدرج داخل النص فقط */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-weight: bold;
+  font-size: 2.5rem; /* حجم أكبر عشان يبان التأثير */
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Day Theme */
+body.day {
+  background: linear-gradient(to top, #fddb92, #d1fdff); /* Sunny gradient */
+  color: #333;
+}
+
+/* Night Theme */
+body.night {
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364); /* Night sky gradient */
+  color: #eee;
+}
+
+
+input,
+button,
+.list-group-item {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input:hover,
+button:hover,
+.list-group-item:hover{
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+input:active,
+button:active,
+.list-group-item:active{
+    transform: scale(0.98);
+}
+
+
+.titillium-web-regular {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#suggestions {
+  max-height: 200px;
+  overflow-y: visible;
+  min-width: 330px;
+  cursor: pointer;
+}
+
+
